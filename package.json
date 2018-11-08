@@ -1,11 +1,11 @@
 {
-  "name": "car-reader",
+  "name": "octopus",
   "version": "1.0.0",
-  "description": "",
+  "description": "A crosss platform application base on electron.",
   "main": "resource/main.js",
   "scripts": {
     "start": "electron .",
-    "pack": "pack.js"
+    "build": "node config/build.js"
   },
   "author": "Hank",
   "license": "ISC",
