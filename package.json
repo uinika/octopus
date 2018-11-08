@@ -1,0 +1,19 @@
+{
+  "name": "car-reader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "resource/main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "pack.js"
+  },
+  "author": "Hank",
+  "license": "ISC",
+  "devDependencies": {
+    "asar": "^0.14.5",
+    "electron": "^3.0.7"
+  },
+  "dependencies": {
+    "electron-builder": "^20.31.2"
+  }
+}

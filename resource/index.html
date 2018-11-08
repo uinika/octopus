@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello Electron</title>
+  </head>
+  <body>
+    <h1>你好，Electron！</h1>
+    <!-- 所有NodeJS可用的API都可以通过renderer.js的process属性访问 -->
+    <h2>当前Electron版本： <script>document.write(process.versions.electron)</script></h2>
+    <h2>当前NodeJS版本：<script>document.write(process.versions.node)</script></h2>
+    <h2>当前Chromium版本： <script>document.write(process.versions.chrome)</script></h2>
+    <script>
+      // 这里也可以包含运行在当前进程里的其它文件
+      require('./renderer.js')
+    </script>
+  </body>
+</html>
