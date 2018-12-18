@@ -3,12 +3,12 @@ const { app, BrowserWindow } = require("electron");
 let mainWindow;
 
 app.on("ready", () => {
-  mainWindow = new BrowserWindow({ width: 800, height: 500 });
+  mainWindow = new BrowserWindow({ width: 800, height: 500, frame: false });
 
   mainWindow.setMenu(null);
   mainWindow.loadFile("resource/index.html");
 
-  mainWindow.webContents.openDevTools() // 开启调试模式
+  mainWindow.webContents.openDevTools(); // 开启调试模式
 
   mainWindow.on("closed", () => {
     mainWindow = null;
