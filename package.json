@@ -10,7 +10,8 @@
   "author": "Hank",
   "license": "ISC",
   "devDependencies": {
-    "asar": "^0.14.5"
+    "asar": "^1.0.0",
+    "electron-builder": "^20.38.5"
   },
   "dependencies": {
     "electron": "^4.0.7"
