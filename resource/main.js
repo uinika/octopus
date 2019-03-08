@@ -7,6 +7,7 @@ app.on("ready", () => {
 
   mainWindow.setMenu(null);
   mainWindow.loadFile("resource/index.html");
+  // mainWindow.loadURL("http://localhost:4200/login");
 
   mainWindow.webContents.openDevTools(); // 开启调试模式
 

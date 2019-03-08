@@ -10,11 +10,9 @@
   "author": "Hank",
   "license": "ISC",
   "devDependencies": {
-    "asar": "^0.14.5",
-    "electron-builder": "^20.31.2"
+    "asar": "^0.14.5"
   },
   "dependencies": {
-    "@pokusew/pcsclite": "^0.4.18",
-    "electron": "^3.0.13"
+    "electron": "^4.0.7"
   }
 }
