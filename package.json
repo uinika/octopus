@@ -1,19 +1,24 @@
 {
-  "name": "octopus",
-  "version": "1.0.0",
-  "description": "A crosss platform application base on electron.",
+  "name": "Octopus",
+  "version": "1.1.0",
+  "description": "An interesting desktop application by electron",
   "main": "resource/main.js",
   "scripts": {
     "start": "electron .",
-    "build": "node config/build.js"
+    "build": "node config/build.js",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
-  "author": "Hank",
+  "build": { 
+    "asar": false 
+  }, 
   "license": "ISC",
   "devDependencies": {
     "asar": "^1.0.0",
+    "electron": "^4.0.7",
     "electron-builder": "^20.38.5"
   },
   "dependencies": {
-    "electron": "^4.0.7"
+    "express": "^4.16.4"
   }
 }
