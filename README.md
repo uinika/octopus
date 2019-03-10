@@ -1,13 +1,13 @@
 # Octopus
 
+![logo](./resource/logo.svg)
+
 - asar 1.0.0 ,
 - express 4.16.4,
 - electron 4.0.7 ,
 - electron-builder 20.38.5
 
 ## An interesting desktop application by electron
-
-![logo](./resource/logo.svg)
 
 安装npm依赖包。
 
