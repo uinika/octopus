@@ -7,7 +7,7 @@ app.on("ready", () => {
 
   /** 启动Express服务 */
   const webServer = express();
-  webServer.use(express.static("./resources/app/resource/my-app"));
+  webServer.use(express.static("./resources/app/resource/web-app"));
   webServer.listen(5200);
 
   /** 启动Electron主进程 */
