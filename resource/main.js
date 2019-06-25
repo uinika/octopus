@@ -29,7 +29,7 @@ app.on("ready", () => {
     }
   });
 
-  mainWindow.loadFile("resource/index.html"); // 从本地文件路径加载
+  mainWindow.loadFile("resource/app/index.html"); // 从本地文件路径加载
   // mainWindow.loadURL("http://localhost:5200/index.html"); // 从Web服务的URL加载
   // mainWindow.webContents.openDevTools(); // 开启调试模式
 
