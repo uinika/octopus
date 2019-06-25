@@ -1,7 +1,7 @@
 {
   "name": "Octopus",
-  "version": "1.1.0",
-  "description": "An interesting desktop application by electron",
+  "version": "0.0.12",
+  "description": "An interesting application by Electron",
   "main": "resource/main.js",
   "scripts": {
     "start": "electron .",
@@ -9,16 +9,16 @@
     "pack": "electron-builder --dir",
     "dist": "electron-builder"
   },
-  "build": { 
-    "asar": false 
-  }, 
+  "build": {
+    "asar": false
+  },
   "license": "ISC",
   "devDependencies": {
-    "asar": "^1.0.0",
-    "electron": "^4.0.7",
-    "electron-builder": "^20.38.5"
+    "asar": "^2.0.1",
+    "electron": "^5.0.5",
+    "electron-builder": "^20.44.4"
   },
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.17.1"
   }
 }

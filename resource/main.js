@@ -1,25 +1,57 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, globalShortcut, Menu, MenuItem } = require("electron");
 const express = require("express");
+const menu = new Menu();
 
 let mainWindow;
 
 app.on("ready", () => {
 
   /** 启动Express服务 */
-  const webServer = express();
-  webServer.use(express.static("./resources/app/resource/web-app"));
-  webServer.listen(5200);
+  // const webServer = express();
+  // webServer.use(express.static("./resources/app/resource/web-app"));
+  // webServer.listen(5200);
 
   /** 启动Electron主进程 */
-  mainWindow = new BrowserWindow({ width: 1200, height: 800, frame: true, autoHideMenuBar: true });
-  mainWindow.setMenu(null);
-  // mainWindow.loadFile("resource/index.html"); // 从本地文件路径加载
-  mainWindow.loadURL("http://localhost:5200/index.html"); // 从Web服务的URL加载
+  mainWindow = new BrowserWindow({
+    show: false,
+    width: 1000,
+    height: 650,
+    minWidth: 1000,
+    minHeight: 650,
+    frame: true,
+    darkTheme: true,
+    backgroundColor: "#282828",
+    resizable: true,
+    useContentSize: true,
+    autoHideMenuBar: true,
+    webPreferences: {
+      nodeIntegration: true
+    }
+  });
+
+  mainWindow.loadFile("resource/index.html"); // 从本地文件路径加载
+  // mainWindow.loadURL("http://localhost:5200/index.html"); // 从Web服务的URL加载
   // mainWindow.webContents.openDevTools(); // 开启调试模式
 
   mainWindow.on("closed", () => {
     mainWindow = null;
   });
+
+  mainWindow.once("ready-to-show", () => {
+    mainWindow.show();
+  });
+
+  menu.append(
+    new MenuItem({
+      label: "Toggle Developer Tools",
+      accelerator: process.platform === "darwin" ? "Alt+Cmd+I" : "Ctrl+Shift+I",
+      click: () => {
+        mainWindow.webContents.toggleDevTools();
+      }
+    })
+  );
+
+  mainWindow.setMenu(menu);
 });
 
 app.on("window-all-closed", () => {
