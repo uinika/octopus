@@ -1,6 +1,6 @@
 {
   "name": "Octopus",
-  "version": "0.0.12",
+  "version": "0.1.0",
   "description": "An interesting application by Electron",
   "main": "resource/main.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "dist": "electron-builder"
   },
   "build": {
-    "asar": false
+    "asar": true
   },
   "license": "ISC",
   "devDependencies": {

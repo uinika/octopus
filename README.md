@@ -2,10 +2,16 @@
 
 ![logo](./resource/logo.svg)
 
-- asar 1.0.0 ,
-- express 4.16.4,
-- electron 4.0.7 ,
-- electron-builder 20.38.5
+- asar 2.0.1 ,
+- express 4.17.1,
+- electron 5.0.5 ,
+- electron-builder 20.44.4
+
+## Directory description
+
+- `resource/app` 目录：放置等待打包的前端代码，打包后以`file:///`协议运行。
+- `resource/web-app` 目录：放置等待打包的前端代码，打包后以`http://`协议运行。
+- `dist` 目录：输出 Electron 打包后的可执行文件。
 
 ## An interesting desktop application by electron
 
